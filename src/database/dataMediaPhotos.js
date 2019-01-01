@@ -1,0 +1,34 @@
+const dataMediaPhotos = [
+	{
+		photoName: "Leecher Official 1",
+		photoLink: "../img/media/leecher_band_full_2018.jpg",
+		photoDescription: "Official photo of the band #1."
+	},
+	{
+		photoName: "Leecher Official 2",
+		photoLink: "../img/media/leecher_band_lines_2018.jpg",
+		photoDescription: "Official photo of the band #2."
+	},
+	{
+		photoName: "Sightless Album Wallpaper",
+		photoLink: "../img/media/wallpaper_cdcover.jpg",
+		photoDescription: "FHD Wallpaper with the 'Sightless' album cover."
+	},
+	{
+		photoName: "Sightless Album Wallpaper (Cello)",
+		photoLink: "../img/media/wallpaper_cdcover_onlycello.jpg",
+		photoDescription: "FHD Wallpaper with the 'Sightless' album cover, only the cello."
+	},
+	{
+		photoName: "Sightless Album 'Movie Poster'",
+		photoLink: "../img/media/band_albumPoster.jpg",
+		photoDescription: "Movie poster style promo for the 'Sightless' album."
+	},
+	{
+		photoName: "Sightless Album 'Movie Poster' #2",
+		photoLink: "../img/media/albumPoster2.jpg",
+		photoDescription: "Movie poster style promo for the 'Sightless' album."
+	},
+];
+
+export default dataMediaPhotos;

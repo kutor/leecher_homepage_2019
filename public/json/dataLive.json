@@ -1,0 +1,95 @@
+{
+	"dataLive": [
+
+		{
+			"showDate": "2019-02-15",
+			"showCountry": "Hungary",
+			"showCity": "Székesfehérvár",
+			"showVenue": "Ikon Club",
+			"showVenueWeb": "https://www.facebook.com/events/348460242631410/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
+			"showDate": "2019-02-16",
+			"showCountry": "Hungary",
+			"showCity": "Esztergom",
+			"showVenue": "Sportalsó",
+			"showVenueWeb": "https://www.facebook.com/events/198934684393162/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
+			"showDate": "2019-02-22",
+			"showCountry": "Hungary",
+			"showCity": "Békéscsaba",
+			"showVenue": "Narancs Rock Cafe",
+			"showVenueWeb": "https://www.facebook.com/events/301847250443232/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
+			"showDate": "2019-02-23",
+			"showCountry": "Hungary",
+			"showCity": "Debrecen",
+			"showVenue": "Kaptár Klub",
+			"showVenueWeb": "https://www.facebook.com/events/2192677274384610/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
+			"showDate": "2019-03-08",
+			"showCountry": "Hungary",
+			"showCity": "Győr",
+			"showVenue": "Dongó",
+			"showVenueWeb": "https://www.facebook.com/events/389765551597127/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
+			"showDate": "2019-03-09",
+			"showCountry": "Hungary",
+			"showCity": "Szombathely",
+			"showVenue": "Végállomás",
+			"showVenueWeb": "https://www.facebook.com/events/506395159864746/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
+			"showDate": "2019-04-12",
+			"showCountry": "Hungary",
+			"showCity": "Pécs",
+			"showVenue": "Ti-Ti-Tá",
+			"showVenueWeb": "https://www.facebook.com/events/337964830363973/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
+			"showDate": "2019-04-13",
+			"showCountry": "Hungary",
+			"showCity": "Szekszárd",
+			"showVenue": "Szekszárdi Est",
+			"showVenueWeb": "https://www.facebook.com/events/271430773519772/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
+			"showDate": "2019-05-03",
+			"showCountry": "Hungary",
+			"showCity": "Zalaegerszeg",
+			"showVenue": "Atlantis",
+			"showVenueWeb": "https://www.facebook.com/events/975333512854848/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
+			"showDate": "2019-05-04",
+			"showCountry": "Hungary",
+			"showCity": "Sopron",
+			"showVenue": "Hangár Music Garden",
+			"showVenueWeb": "https://www.facebook.com/events/2246801822270506/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		}
+	]
+}
