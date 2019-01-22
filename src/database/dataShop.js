@@ -1,17 +1,24 @@
 const dataShop = [
     {
         itemName: "'Sightless' CD",
-        itemImage: "../img/albums/album_sightless.png",
-        itemLink: "http://www.metalshop.hu/product_info.php?products_id=18097&language=en",
-        itemDescriptionEn: "MetalShop.hu - ENGLISH / Angol",
-        itemDescriptionHu: "(EU Residents)"
+        itemImage: "../img/shop/shop_album_sightless.png",
+        itemLink: "https://popshop.hu/leecher/15528-leecher-sightless.html",
+        itemDescriptionEn: "Leecher's first album.",
+        itemDescriptionHu: "A Leecher első lemeze."
     },
     {
-        itemName: "'Sightless' CD",
-        itemImage: "../img/albums/album_sightless.png",
-        itemLink: "http://www.metalshop.hu/product_info.php?products_id=18097&language=hu",
-        itemDescriptionEn: "MetalShop.hu - MAGYAR / Hungarian",
-        itemDescriptionHu: "(EU lakosok)"
+        itemName: "Logo Shirt",
+        itemImage: "./img/shop/shop_shirt_plainlogo.jpg",
+        itemLink: "https://popshop.hu/leecher/15514-leecher-logo-ferfi-es-noi-polo.html",
+        itemDescriptionEn: "S to XXL, T-shirt and Girlie both available",
+        itemDescriptionHu: "S-XXL, férfi és női is"
+    },
+    {
+        itemName: "Cello Broken Glass Shirt",
+        itemImage: "./img/shop/shop_shirt_cello.jpg",
+        itemLink: "https://popshop.hu/leecher/15515-leecher-chello-ferfi-es-noi-polo.html",
+        itemDescriptionEn: "S to XXL, T-shirt and Girlie both available",
+        itemDescriptionHu: "S-XXL, férfi és női is"
     },
 ]
 

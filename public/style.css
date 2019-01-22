@@ -1,7 +1,7 @@
 /* LEECHER CSS */
 
 html, body{
-	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
 	color:white;
 	width:100%;
 	height:100%;
@@ -39,7 +39,7 @@ ul{
 }
 
 								 /* TOP PART*/
-								 
+
 #sticky{
 	position:sticky;
 	top:0;
@@ -70,7 +70,7 @@ nav{
 	background-color:white;
 	color:black;
 	display:flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items:center;
 }
 .menu_link{
@@ -193,6 +193,7 @@ h6{
 #div_news{
 	display:flex;
 	flex-wrap:wrap;
+	justify-content:space-around;
 }
 
 .div_news_small{
@@ -255,7 +256,7 @@ h6{
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
-.bandMemberProfile{
+.band_member_profile{
 	width:30%;
 	text-align:center;
 	vertical-align:top;
@@ -263,11 +264,11 @@ h6{
 	padding-right:1%;
 	padding-bottom:50px;
 }
-.bandMemberProfile p{
+.band_member_profile p{
 	padding-left:5%;
 	padding-right:5%;
 }
-.bandMemberProfile img{
+.band_member_profile img{
 	max-width:90%;
 	height:auto;
 }
@@ -301,16 +302,16 @@ h6{
 	justify-content: flex-start;
 	display:inline-block;
 	padding: 0px 20px;
-
 }
 
 									/* MEDIA */
 
-#media_videos{
+#media_videos, #div_media_videos{
 	display:flex;
 	flex-wrap:wrap;
+	justify-content:space-around;
 }
-.div_media_video{						/* VIDEOS */
+.div_media_item{						/* VIDEOS */
 	width:30%;
 	height:auto;
 	margin:1%;
@@ -319,7 +320,7 @@ h6{
 	display:inline-block;
 	vertical-align:top;
 }
-.div_media_video p{
+.div_media_item p{
 	padding: 0% 5% 3% 5%;
 	text-align:center;
 }
@@ -329,24 +330,12 @@ h6{
 	height:auto;
 	padding:1% auto;
 }										/* PHOTOS */
-
-#media_photos{
+#media_photos, #div_media_photos{
 	display:flex;
+	justify-content:space-around;
 	flex-wrap:wrap;
 }
-.div_media_photo{
-	width:30%;
-	height:auto;
-	text-align:center;
-	margin:1%;
-	display:inline-block;
-	vertical-align:top;
-}
-.div_media_photo p{
-	padding: 0% 5% 5% 5%;
-	text-align:center;
-}
-.div_media_photo img{
+.div_media_item img{
 	width:98%;
 	height:auto;
 	margin:2% auto;
@@ -358,15 +347,10 @@ h6{
 	justify-content:space-around;
 	flex-wrap:wrap;
 }
-.shop_comingSoon{
-	font-size:80px; 
-	text-align:center; 
-	padding:10% 0%
-}
 									/* CONTACT */
 #div_contact{
 	display:flex;
-	justify-content:space-between;
+	justify-content:space-around;
 	flex-wrap:wrap;
 }
 									
@@ -414,5 +398,11 @@ h6{
 	height:100%;
 	background-color:black;
 	border-style:none;
-	frameBorder:0;
 }	
+
+
+@media only screen and (max-width: 1000px){
+	.resp{
+		width:90%;
+	}
+}

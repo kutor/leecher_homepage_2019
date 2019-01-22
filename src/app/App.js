@@ -31,6 +31,16 @@ class App extends Component{
 // ------------------------------------ 
 
 
+/*
+
+componentDidMount(){
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then(response => response.json())
+    .then(data => CODE);
+}
+
+*/
+
 class SocialIcon extends React.Component{
   render(){
     return (
@@ -133,7 +143,7 @@ class MainBody extends Component {
 class Bottom extends Component {
   render() {
     return (
-      <div id="div_footer">-  © 2016-2018 Leecher  -  coded by kutor  -  contact: <a href="mailto:management@leechermusic.com" target="_blank" rel="noopener noreferrer">management@leechermusic.com</a>  -  <a href="legal.html">legal & privacy policy</a>  -</div>
+      <div id="div_footer">-  © 2016-2019 Leecher  -  coded by kutor  -  contact: <a href="mailto:management@leechermusic.com" target="_blank" rel="noopener noreferrer">management@leechermusic.com</a>  -  <a href="legal.html">legal & privacy policy</a>  -</div>
     );
   }
 }
@@ -152,7 +162,7 @@ class ContentNews extends Component {
   }
 
   componentDidMount() {
-    fetch("/json/dataNews.json")
+    fetch("http://leechermusic.com/json/dataNews.json")
       .then(response => response.json())
       .then(resp => this.setState(
         {dataNews: resp.dataNews}
@@ -189,7 +199,7 @@ class ContentNews extends Component {
 class DivNews extends Component {
   render() {
     return (
-      <div className="div_news_small">
+      <div className="div_news_small resp">
         <h5>{this.props.newsTitle}</h5>
         <p dangerouslySetInnerHTML={{ __html: this.props.newsText }} />
         <h6>{this.props.newsDate}</h6>
@@ -238,7 +248,7 @@ class DivBandMembers extends Component {
         <div id="members">
         {dataBandMembers.map((member, i) => {
             return ( 
-              <div className="bandMemberProfile">
+              <div className="band_member_profile resp">
                 <img src={dataBandMembers[i].bandMemberImage} alt={dataBandMembers[i].bandMemberName}/>
                 <h3>{dataBandMembers[i].bandMemberName}</h3>
                 <p>{dataBandMembers[i].bandMemberTextEn}</p>
@@ -341,7 +351,7 @@ class ContentLive extends Component {
   }
 
   componentDidMount() {
-    fetch("/json/dataLive.json")
+    fetch("http://leechermusic.com/json/dataLive.json")
       .then(response => response.json())
       .then(resp => this.setState(
         {dataLive: resp.dataLive}
@@ -438,7 +448,7 @@ class ContentMedia extends Component {
 class DivMediaVideo extends Component {
   render() {
     return (
-      <div className="div_media_video">
+      <div className=" div_media_item resp">
         <h3>{this.props.videoName}</h3>
         <iframe title={this.props.videoName} className="iframe_youtube" src={this.props.videoLink}>
         </iframe>
@@ -451,7 +461,7 @@ class DivMediaVideo extends Component {
 class DivMediaPhoto extends Component {
   render() {
     return (
-      <div className="div_media_photo">
+      <div className="div_media_item resp">
         <h3>{this.props.PhotoName}</h3>
         <a href={this.props.photoLink} target="_blank" rel="noopener noreferrer"><img src={this.props.photoLink} alt={this.props.photoDescription} /></a>
         <p>{this.props.photoDescription}</p>
@@ -479,9 +489,6 @@ class ContentShop extends Component {
               /> 
             );
           })}
-          <h6>EN - Please note that metalshop.hu is not 'the official Leecher shop' (that will come eventually too), it is run by our record label. Should you have any questions, please contact <a href="http://www.metalshop.hu/contact_us.php" target="_blank" rel="noopener noreferrer">them</a>.</h6>
-          <h6>HU - Szeretnénk jelezni, hogy a metalshop.hu nem "a Leecher hivatalos shopja" (idővel az is lesz!), hanem a kiadónk működteti. Ezért az esetleges kérdésekkel <a href="http://www.metalshop.hu/contact_us.php?language=hu" target="_blank" rel="noopener noreferrer">hozzájuk</a> fordulhattok.</h6>
-          <p className="shop_comingSoon">[COMING SOON / HAMAROSAN]</p>
         </div>
       </div>
     );
@@ -491,7 +498,7 @@ class ContentShop extends Component {
 class DivShop extends Component {
   render() {
     return (
-      <article className="article_contact">
+      <article className="article_contact resp">
         <a href={this.props.itemLink} target="_blank" rel="noopener noreferrer">
           <img src={this.props.itemImage} alt={this.props.itemName} />
           <h3>{this.props.itemName}</h3>
@@ -543,7 +550,7 @@ class ContentContact extends Component {
 class DivContact extends Component {
   render() {
     return (
-      <article className="article_contact">
+      <article className="article_contact resp">
         <h3>{this.props.contactName}</h3>
         <p>{this.props.contactPerson.toUpperCase()}</p>
         <p>{this.props.contactEmail}</p>
@@ -559,7 +566,7 @@ class DivContact extends Component {
 class DivContactSocial extends Component {
   render() {
     return (
-      <article className="article_contact">
+      <article className="article_contact resp">
         <h3>{this.props.name}</h3>
         <a href={this.props.link} target="_blank" rel="noopener noreferrer">
           <img src={this.props.icon} alt={this.props.name} />
