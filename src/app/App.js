@@ -90,7 +90,6 @@ class Menu extends Component {
     return (
       <div>
         <nav id="headerMenu">
-          <div id="navbarDropdownLi">NAVIGATION</div>
           <ul id="menu">
             {this.state.compMenu.map((element, i) => {
               return(
@@ -339,7 +338,7 @@ class ContentAlbums extends Component {
                 <h4>{`${this.state.dataBandAlbums[i].albumTitle} (${this.state.dataBandAlbums[i].albumYear})`}</h4>
                 <img className="img_album" src={this.state.dataBandAlbums[i].albumCover} alt={this.state.dataBandAlbums[i].albumTitle} />
                 {this.state.dataBandAlbums[i].albumSongsAndLyrics.map((song, j) => {
-                  return ( 
+                  return (
                     <Song
                       songNumber = {this.state.dataBandAlbums[i].albumSongsAndLyrics[j].number}
                       songTitle = {this.state.dataBandAlbums[i].albumSongsAndLyrics[j].title}
@@ -482,8 +481,9 @@ class ContentMedia extends Component {
       .then(response => response.json())
       .then(resp => this.setState(
         {dataMediaPhotos: resp.dataMediaPhotos}
-      ))
-      .then(fetch("/json/dataMediaVideos.json"))
+      ));
+
+      fetch("/json/dataMediaVideos.json")
       .then(response => response.json())
       .then(resp => this.setState(
         {dataMediaVideos: resp.dataMediaVideos}
