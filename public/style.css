@@ -405,4 +405,10 @@ h6{
 	.resp{
 		width:90%;
 	}
+	.div_liveshow_sub div{
+		display:flex;
+	}
+	.menu_link{
+		font-size:.8em;
+	}
 }

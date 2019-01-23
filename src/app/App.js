@@ -1,15 +1,5 @@
 import React, { Component } from 'react';
 //import ErrorBoundary from '../errorBoundary.js';
-import social from '../database/database.js';
-import compMenu from '../database/compMenu.js';
-import dataBandBio from '../database/dataBandBio.js';
-import dataBandAlbums from '../database/dataBandAlbums.js';
-import dataBandMembers from '../database/dataBandMembers.js';
-import dataMediaVideos from "../database/dataMediaVideos.js";
-import dataMediaPhotos from "../database/dataMediaPhotos.js";
-import dataShop from "../database/dataShop.js";
-import dataContacts from "../database/dataContacts.js";
-
 
 
 class App extends Component{
@@ -31,16 +21,6 @@ class App extends Component{
 // ------------------------------------ 
 
 
-/*
-
-componentDidMount(){
-  fetch("https://jsonplaceholder.typicode.com/users")
-    .then(response => response.json())
-    .then(data => CODE);
-}
-
-*/
-
 class SocialIcon extends React.Component{
   render(){
     return (
@@ -53,16 +33,32 @@ class SocialIcon extends React.Component{
 
 
 class SocialLine extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      dataSocial: [],
+    }
+  }
+
+  componentDidMount() {
+    fetch("/json/dataSocial.json")
+      .then(response => response.json())
+      .then(resp => this.setState(
+        {dataSocial: resp.dataSocial}
+      ))
+  }
+
   render() {
     return (
       <div id="headerUpperLine">
         {
-          social.map((icon, i) => {
+          this.state.dataSocial.map((icon, i) => {
             return ( 
               <SocialIcon 
-                name={social[i].name} 
-                icon={social[i].icon} 
-                link={social[i].link}
+                name={this.state.dataSocial[i].name} 
+                icon={this.state.dataSocial[i].icon} 
+                link={this.state.dataSocial[i].link}
               />
             );
           })
@@ -74,17 +70,33 @@ class SocialLine extends Component {
 
 
 class Menu extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      compMenu: [],
+    }
+  }
+
+  componentDidMount() {
+    fetch("/json/compMenu.json")
+      .then(response => response.json())
+      .then(resp => this.setState(
+        {compMenu: resp.compMenu}
+      ))
+  }
+
   render() {
     return (
       <div>
         <nav id="headerMenu">
           <div id="navbarDropdownLi">NAVIGATION</div>
           <ul id="menu">
-            {compMenu.map((element, i) => {
+            {this.state.compMenu.map((element, i) => {
               return(
                 <MenuElement 
-                  name = {compMenu[i].name}
-                  link = {compMenu[i].fill.link}
+                  name = {this.state.compMenu[i].name}
+                  link = {this.state.compMenu[i].fill.link}
                 />
               );
             }
@@ -98,15 +110,13 @@ class Menu extends Component {
 }
 
 class MenuElement extends Component {
-   
+
   render() {
     return(
       <li id={`menu_${this.props.name}`} className="menu_link"><a href={`#${this.props.link}`}>{this.props.name}</a> </li> //TODO
     )
   }
 }
-
-
 
 
 class BandImage extends Component {
@@ -162,7 +172,7 @@ class ContentNews extends Component {
   }
 
   componentDidMount() {
-    fetch("http://leechermusic.com/json/dataNews.json")
+    fetch("/json/dataNews.json")
       .then(response => response.json())
       .then(resp => this.setState(
         {dataNews: resp.dataNews}
@@ -212,6 +222,7 @@ class DivNews extends Component {
 // ---------- BAND
 
 class ContentBand extends Component {
+
   render() {
     return (
       <div id="link_band" className="anchor">
@@ -226,13 +237,29 @@ class ContentBand extends Component {
 }
 
 class DivBandBio extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      dataBandBio: [],
+    }
+  }
+
+  componentDidMount() {
+    fetch("/json/dataBandBio.json")
+      .then(response => response.json())
+      .then(resp => this.setState(
+        {dataBandBio: resp.dataBandBio}
+      ))
+  }
+
   render() {
     return (
-      dataBandBio.map((bio, i) => {
+      this.state.dataBandBio.map((bio, i) => {
         return ( 
             <DivNews 
-              newsTitle = {<h4>{dataBandBio[i].dataBandBioTitle}</h4>}
-              newsText = {dataBandBio[i].dataBandBioText}
+              newsTitle = {<h4>{this.state.dataBandBio[i].dataBandBioTitle}</h4>}
+              newsText = {this.state.dataBandBio[i].dataBandBioText}
             /> 
         );
       })
@@ -241,19 +268,35 @@ class DivBandBio extends Component {
 }
 
 class DivBandMembers extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      dataBandMembers: [],
+    }
+  }
+
+  componentDidMount() {
+    fetch("/json/dataBandMembers.json")
+      .then(response => response.json())
+      .then(resp => this.setState(
+        {dataBandMembers: resp.dataBandMembers}
+      ))
+  }
+
   render() {
     return (
       <div id="band_members content_container">
         <h2 className="centered">Band Members / Tagok</h2>
         <div id="members">
-        {dataBandMembers.map((member, i) => {
+        {this.state.dataBandMembers.map((member, i) => {
             return ( 
               <div className="band_member_profile resp">
-                <img src={dataBandMembers[i].bandMemberImage} alt={dataBandMembers[i].bandMemberName}/>
-                <h3>{dataBandMembers[i].bandMemberName}</h3>
-                <p>{dataBandMembers[i].bandMemberTextEn}</p>
+                <img src={this.state.dataBandMembers[i].bandMemberImage} alt={this.state.dataBandMembers[i].bandMemberName}/>
+                <h3>{this.state.dataBandMembers[i].bandMemberName}</h3>
+                <p>{this.state.dataBandMembers[i].bandMemberTextEn}</p>
                 <br />
-                <p>{dataBandMembers[i].bandMemberTextHu}</p>
+                <p>{this.state.dataBandMembers[i].bandMemberTextHu}</p>
               </div>
             );
           })}
@@ -267,24 +310,40 @@ class DivBandMembers extends Component {
 // ---------- ALBUMS
 
 class ContentAlbums extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      dataBandAlbums: [],
+    }
+  }
+
+  componentDidMount() {
+    fetch("/json/dataBandAlbums.json")
+      .then(response => response.json())
+      .then(resp => this.setState(
+        {dataBandAlbums: resp.dataBandAlbums}
+      ))
+  }
+
   render() {
     return (
       <div id="link_albums" className="anchor">
         <h2 className="centered">Discography & Lyrics / Lemezek & Szövegek</h2>
         <div id="div_discography" className="content_container">
         
-          {dataBandAlbums.map((album, i) => {
+          {this.state.dataBandAlbums.map((album, i) => {
             return ( 
               <div className="div_album">
                 <br />
-                <h4>{`${dataBandAlbums[i].albumTitle} (${dataBandAlbums[i].albumYear})`}</h4>
-                <img className="img_album" src={dataBandAlbums[i].albumCover} alt={dataBandAlbums[i].albumTitle} />
-                {dataBandAlbums[i].albumSongsAndLyrics.map((song, j) => {
+                <h4>{`${this.state.dataBandAlbums[i].albumTitle} (${this.state.dataBandAlbums[i].albumYear})`}</h4>
+                <img className="img_album" src={this.state.dataBandAlbums[i].albumCover} alt={this.state.dataBandAlbums[i].albumTitle} />
+                {this.state.dataBandAlbums[i].albumSongsAndLyrics.map((song, j) => {
                   return ( 
                     <Song
-                      songNumber = {dataBandAlbums[i].albumSongsAndLyrics[j].number}
-                      songTitle = {dataBandAlbums[i].albumSongsAndLyrics[j].title}
-                      songLyrics = {dataBandAlbums[i].albumSongsAndLyrics[j].lyrics}
+                      songNumber = {this.state.dataBandAlbums[i].albumSongsAndLyrics[j].number}
+                      songTitle = {this.state.dataBandAlbums[i].albumSongsAndLyrics[j].title}
+                      songLyrics = {this.state.dataBandAlbums[i].albumSongsAndLyrics[j].lyrics}
                     />
                   );
                 })}
@@ -351,7 +410,7 @@ class ContentLive extends Component {
   }
 
   componentDidMount() {
-    fetch("http://leechermusic.com/json/dataLive.json")
+    fetch("/json/dataLive.json")
       .then(response => response.json())
       .then(resp => this.setState(
         {dataLive: resp.dataLive}
@@ -409,6 +468,28 @@ class DivLive extends Component {
 // ---------- MEDIA
 
 class ContentMedia extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      dataMediaPhotos: [],
+      dataMediaVideos: []
+    }
+  }
+
+  componentDidMount() {
+    fetch("/json/dataMediaPhotos.json")
+      .then(response => response.json())
+      .then(resp => this.setState(
+        {dataMediaPhotos: resp.dataMediaPhotos}
+      ))
+      .then(fetch("/json/dataMediaVideos.json"))
+      .then(response => response.json())
+      .then(resp => this.setState(
+        {dataMediaVideos: resp.dataMediaVideos}
+      ))
+  }
+
   render() {
     return (
       <div id="link_media" className="anchor">
@@ -416,12 +497,12 @@ class ContentMedia extends Component {
         <div id="div_media" className="content_container">
           
           <div id="media_videos">
-            {dataMediaVideos.map((video, i) => {
+            {this.state.dataMediaVideos.map((video, i) => {
               return ( 
                 <DivMediaVideo 
-                  videoName = {dataMediaVideos[i].videoName}
-                  videoLink = {dataMediaVideos[i].videoLink}
-                  videoDescription = {dataMediaVideos[i].videoDescription}
+                  videoName = {this.state.dataMediaVideos[i].videoName}
+                  videoLink = {this.state.dataMediaVideos[i].videoLink}
+                  videoDescription = {this.state.dataMediaVideos[i].videoDescription}
                 /> 
               );
             })}
@@ -429,12 +510,12 @@ class ContentMedia extends Component {
             
           <h2 className="centered">Photos / Fotók</h2>
           <div id="div_media_photos">
-            {dataMediaPhotos.map((photo, j) => {
+            {this.state.dataMediaPhotos.map((photo, j) => {
               return ( 
                 <DivMediaPhoto
-                  photoName = {dataMediaPhotos[j].photoName}
-                  photoLink = {dataMediaPhotos[j].photoLink}
-                  photoDescription = {dataMediaPhotos[j].photoDescription}
+                  photoName = {this.state.dataMediaPhotos[j].photoName}
+                  photoLink = {this.state.dataMediaPhotos[j].photoLink}
+                  photoDescription = {this.state.dataMediaPhotos[j].photoDescription}
                 /> 
               );
             })}
@@ -472,20 +553,37 @@ class DivMediaPhoto extends Component {
 
 // ---------- SHOP
 
+
 class ContentShop extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      dataShop: [],
+    }
+  }
+  
+  componentDidMount() {
+    fetch("/json/dataShop.json")
+      .then(response => response.json())
+      .then(resp => this.setState(
+        {dataShop: resp.dataShop}
+      ));
+  }
+
   render() {
     return (
       <div id="link_shop" className="anchor">
         <h2 className="centered">Shop / Bolt</h2>
         <div id="div_shop" className="content_container">
-          {dataShop.map((shopItem, i) => {
+          {this.state.dataShop.map((shopItem, i) => {
             return ( 
               <DivShop
-                itemName = {dataShop[i].itemName}
-                itemImage = {dataShop[i].itemImage}
-                itemLink = {dataShop[i].itemLink}
-                itemDescriptionEn = {dataShop[i].itemDescriptionEn}
-                itemDescriptionHu = {dataShop[i].itemDescriptionHu}
+                itemName = {this.state.dataShop[i].itemName}
+                itemImage = {this.state.dataShop[i].itemImage}
+                itemLink = {this.state.dataShop[i].itemLink}
+                itemDescriptionEn = {this.state.dataShop[i].itemDescriptionEn}
+                itemDescriptionHu = {this.state.dataShop[i].itemDescriptionHu}
               /> 
             );
           })}
@@ -515,29 +613,47 @@ class DivShop extends Component {
 // ---------- CONTACT
 
 class ContentContact extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      dataContacts: [],
+      dataSocial: []
+    }
+  }
+  
+  componentDidMount() {
+    fetch("/json/dataSocial.json")
+      .then(response => response.json())
+      .then(resp => this.setState(
+        {dataContacts: resp.dataContacts,
+        dataSocial: resp.dataSocial}
+      ));
+  }
+
   render() {
     return (
       <div id="link_contact" className="anchor">
         <h2 className="centered">Contact / Kapcsolat</h2>
         <div id="div_contact" className="content_container">
         
-          {dataContacts.map((contact, i) => {
+          {this.state.dataContacts.map((contact, i) => {
             return ( 
               <DivContact
-                contactName = {dataContacts[i].contactName}
-                contactPerson = {dataContacts[i].contactPerson}
-                contactEmail = {dataContacts[i].contactEmail}
-                contactWeb = {dataContacts[i].contactWeb}
-                contactWebName = {dataContacts[i].contactWebName}
+                contactName = {this.state.dataContacts[i].contactName}
+                contactPerson = {this.state.dataContacts[i].contactPerson}
+                contactEmail = {this.state.dataContacts[i].contactEmail}
+                contactWeb = {this.state.dataContacts[i].contactWeb}
+                contactWebName = {this.state.dataContacts[i].contactWebName}
               /> 
             );
           })}
-          {social.map((icon, i) => {
+          {this.state.dataSocial.map((icon, i) => {
             return ( 
               <DivContactSocial 
-                name={social[i].name} 
-                icon={social[i].icon} 
-                link={social[i].link}
+                name={this.state.dataSocial[i].name} 
+                icon={this.state.dataSocial[i].icon} 
+                link={this.state.dataSocial[i].link}
               />
             );
           })}
