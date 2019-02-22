@@ -1,14 +1,14 @@
 {
 	"dataMediaVideos" : [
 		{
+			"videoName": "Messengers of Fear (Lyrics Video)",
+			"videoLink": "https://youtube.com/embed/55IwXRPpUVE",
+			"videoDescription": "The first taste of our upcoming 2019 album!"
+		},
+		{
 			"videoName": "Fading (Music Video 2016)",
 			"videoLink": "https://www.youtube.com/embed/No6WFQC_XDk",
 			"videoDescription": "Music video for the song 'Fading', from our first studio album 'Sightless'."
-		},
-		{
-			"videoName": "Messengers of Fear (Live + Studio + Tour Aftermovie)",
-			"videoLink": "https://youtube.com/embed/SEi3tm5Zz0c",
-			"videoDescription": "The first taste of our upcoming 2019 album, this demo is accompanied by videos from our 2018 October tour, studio works, and live performances of the song."
 		},
 		{
 			"videoName": "Slaves to a Dream (Live Lyrics Video)",

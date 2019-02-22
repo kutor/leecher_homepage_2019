@@ -2,34 +2,27 @@ import React, { Component } from 'react';
 //import ErrorBoundary from '../errorBoundary.js';
 
 
-class App extends Component{
-  render() {
-    return (
-      <React.Fragment>
-        <div id="sticky">
-          <SocialLine />
-          <Menu />
-        </div>
-        <BandImage />
-        <MainBody />
-        <Bottom />
-      </React.Fragment>
-    )
-  }
-}
+const App = () => (
+  <React.Fragment>
+    <div id="sticky">
+      <SocialLine />
+      <Menu />
+    </div>
+    <BandImage />
+    <MainBody />
+    <Bottom />
+  </React.Fragment>
+)
 
 // ------------------------------------ 
 
 
-class SocialIcon extends React.Component{
-  render(){
-    return (
-      <a href={this.props.link} target="_blank" rel="noopener noreferrer">
-        <img className="social_img" alt={this.props.name} src={this.props.icon}></img>
-      </a>
-    )
-  }
-}
+const SocialIcon = props => (
+  <a href={props.link} target="_blank" rel="noopener noreferrer">
+    <img className="social_img" alt={props.name} src={props.icon}></img>
+  </a>
+)
+
 
 
 class SocialLine extends Component {
@@ -108,32 +101,21 @@ class Menu extends Component {
   }
 }
 
-class MenuElement extends Component {
-
-  render() {
-    return(
-      <li id={`menu_${this.props.name}`} className="menu_link"><a href={`#${this.props.link}`}>{this.props.name}</a> </li> //TODO
-    )
-  }
-}
+const MenuElement = props => (
+  <li id={`menu_${props.name}`} className="menu_link"><a href={`#${props.link}`}>{props.name}</a> </li> 
+)
 
 
-class BandImage extends Component {
-  render() {
-    return (
-      <div id="div_band_image">
-        <img src="../img/index/band_img_0.png" alt="the band" className="band_image"></img>
-      </div>
-    );
-  }
-}
+
+const BandImage = () => (
+  <div id="div_band_image">
+    <img src="../img/index/band_img_0.png" alt="the band" className="band_image"></img>
+  </div>
+)
 
 
-class MainBody extends Component {
-
-  render() {
-    return (
-      <div>         
+const MainBody = () => (
+      <div id="main_container">         
         <div id="main_content">
           <ContentNews /> 
           <ContentBand /> 
@@ -143,19 +125,31 @@ class MainBody extends Component {
           <ContentShop /> 
           <ContentContact />
         </div>
+        <SideContent />
       </div>
-    );
-  }
-}
+)
+
+const SideContent = () =>(
+      <div id="side_content">
+        <div class="side_social">
+          <h5>Live</h5>
+          
+        </div>
+        <div class="side_social">
+          <h5>Facebook</h5>
+          <iframe title="iframe_facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fleechermusic%2F&tabs=timeline&width=90%25&height=300px&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="90%" height="300px" style={{border:"none",overflow:"hidden"}} scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="side_social">
+          <h5>Instagram</h5>
+        </div>
+      </div>
+);
 
 
-class Bottom extends Component {
-  render() {
-    return (
-      <div id="div_footer">-  © 2016-2019 Leecher  -  coded by kutor  -  contact: <a href="mailto:management@leechermusic.com" target="_blank" rel="noopener noreferrer">management@leechermusic.com</a>  -  <a href="legal.html">legal & privacy policy</a>  -</div>
-    );
-  }
-}
+
+const Bottom = () => (
+  <div id="div_footer">-  © 2016-2019 Leecher  -  coded by kutor  -  contact: <a href="mailto:management@leechermusic.com" target="_blank" rel="noopener noreferrer">management@leechermusic.com</a>  -  <a href="legal.html">legal & privacy policy</a>  -</div>
+)
 
 // ---------- ---------- ---------- SUBPAGES ---------- ---------- ---------- 
 
@@ -205,35 +199,26 @@ class ContentNews extends Component {
   }
 }
 
-class DivNews extends Component {
-  render() {
-    return (
-      <div className="div_news_small resp">
-        <h5>{this.props.newsTitle}</h5>
-        <p dangerouslySetInnerHTML={{ __html: this.props.newsText }} />
-        <h6>{this.props.newsDate}</h6>
-      </div>
-    );
-  }
-}
+const DivNews = props => (
+<div className="div_news_small resp">
+  <h5>{props.newsTitle}</h5>
+  <p dangerouslySetInnerHTML={{ __html: props.newsText }} />
+  <h6>{props.newsDate}</h6>
+</div>
+)
 
 
 // ---------- BAND
 
-class ContentBand extends Component {
-
-  render() {
-    return (
-      <div id="link_band" className="anchor">
-        <h2 className="centered">The Band / A Zenekar</h2>
-        <div id="div_band" className="content_container">
-          <DivBandBio />
-          <DivBandMembers />
-        </div>
-      </div>
-    );
-  }
-}
+const ContentBand = () => (
+  <div id="link_band" className="anchor">
+    <h2 className="centered">The Band / A Zenekar</h2>
+    <div id="div_band" className="content_container">
+      <DivBandBio />
+      <DivBandMembers />
+    </div>
+  </div>
+)
 
 class DivBandBio extends Component {
 
@@ -442,26 +427,22 @@ class ContentLive extends Component {
   }
 }
 
-class DivLive extends Component {
-  render() {
-    return (
+const DivLive = props => (
       <div className="div_liveshow">
         <div className="div_liveshow_sub">
-          <div>{this.props.showDate}</div>
-          <div>{this.props.showCountry}</div>
-          <div>{this.props.showCity}</div>
-          <div><a href={this.props.showVenueWeb}>{this.props.showVenue}</a></div>
+          <div>{props.showDate}</div>
+          <div>{props.showCountry}</div>
+          <div>{props.showCity}</div>
+          <div><a href={props.showVenueWeb}>{props.showVenue}</a></div>
         </div>
         <div className="div_liveshow_sub">
-          <div dangerouslySetInnerHTML={{ __html: this.props.showComment }}></div>
+          <div dangerouslySetInnerHTML={{ __html: props.showComment }}></div>
         </div>
         <div className="div_liveshow_sub">
-          <div>{this.props.showTickets}</div>
+          <div>{props.showTickets}</div>
         </div>
       </div>
-    );
-  }
-}
+    )
 
 
 // ---------- MEDIA
@@ -526,30 +507,22 @@ class ContentMedia extends Component {
   }
 }
 
-class DivMediaVideo extends Component {
-  render() {
-    return (
+const DivMediaVideo = props => (
       <div className=" div_media_item resp">
-        <h3>{this.props.videoName}</h3>
-        <iframe title={this.props.videoName} className="iframe_youtube" src={this.props.videoLink}>
+        <h3>{props.videoName}</h3>
+        <iframe title={props.videoName} className="iframe_youtube" src={props.videoLink}>
         </iframe>
-        <p>{this.props.videoDescription}</p>
+        <p>{props.videoDescription}</p>
       </div>
-    );
-  }
-}
+)
 
-class DivMediaPhoto extends Component {
-  render() {
-    return (
+const DivMediaPhoto = props => (
       <div className="div_media_item resp">
-        <h3>{this.props.PhotoName}</h3>
-        <a href={this.props.photoLink} target="_blank" rel="noopener noreferrer"><img src={this.props.photoLink} alt={this.props.photoDescription} /></a>
-        <p>{this.props.photoDescription}</p>
+        <h3>{props.PhotoName}</h3>
+        <a href={props.photoLink} target="_blank" rel="noopener noreferrer"><img src={props.photoLink} alt={props.photoDescription} /></a>
+        <p>{props.photoDescription}</p>
       </div>
-    );
-  }
-}
+)
 
 // ---------- SHOP
 
@@ -593,21 +566,17 @@ class ContentShop extends Component {
   }
 }
 
-class DivShop extends Component {
-  render() {
-    return (
+const DivShop = props => (
       <article className="article_contact resp">
-        <a href={this.props.itemLink} target="_blank" rel="noopener noreferrer">
-          <img src={this.props.itemImage} alt={this.props.itemName} />
-          <h3>{this.props.itemName}</h3>
+        <a href={props.itemLink} target="_blank" rel="noopener noreferrer">
+          <img src={props.itemImage} alt={props.itemName} />
+          <h3>{props.itemName}</h3>
           <br />
-          <p>{this.props.itemDescriptionEn}</p>
-          <p>{this.props.itemDescriptionHu}</p>
+          <p>{props.itemDescriptionEn}</p>
+          <p>{props.itemDescriptionHu}</p>
         </a>
       </article>
-    );
-  }
-}
+)
 
 
 // ---------- CONTACT
@@ -663,35 +632,27 @@ class ContentContact extends Component {
   }
 }
 
-class DivContact extends Component {
-  render() {
-    return (
+const DivContact = props => (
       <article className="article_contact resp">
-        <h3>{this.props.contactName}</h3>
-        <p>{this.props.contactPerson.toUpperCase()}</p>
-        <p>{this.props.contactEmail}</p>
-        <a href={this.props.contactWeb} target="_blank" rel="noopener noreferrer">
-          <p>{this.props.contactWebName}</p>
+        <h3>{props.contactName}</h3>
+        <p>{props.contactPerson.toUpperCase()}</p>
+        <p>{props.contactEmail}</p>
+        <a href={props.contactWeb} target="_blank" rel="noopener noreferrer">
+          <p>{props.contactWebName}</p>
         </a>
 
       </article>
-    );
-  }
-}
+)
 
-class DivContactSocial extends Component {
-  render() {
-    return (
+const DivContactSocial = props => (
       <article className="article_contact resp">
-        <h3>{this.props.name}</h3>
-        <a href={this.props.link} target="_blank" rel="noopener noreferrer">
-          <img src={this.props.icon} alt={this.props.name} />
-          <p>{this.props.linkDisplay}</p>
+        <h3>{props.name}</h3>
+        <a href={props.link} target="_blank" rel="noopener noreferrer">
+          <img src={props.icon} alt={props.name} />
+          <p>{props.linkDisplay}</p>
         </a>
 
       </article>
-    );
-  }
-}
+)
 
 export default App;

@@ -48,6 +48,7 @@ h2{
 	font-size:30px;
 	font-variant:small-caps;
 	padding: 1% 2% 1%;
+	margin:0%
 }
 h3{
 	font-size:20px;
@@ -127,7 +128,7 @@ nav ul > li{
 
 #div_band_image{
 	text-align:center;
-	margin-bottom:-30px;
+	margin-bottom:-5px;
 }
 #div_band_image img {
 	max-width:100%;
@@ -136,16 +137,27 @@ nav ul > li{
 									/* CONTENT */
 .content_container{
 	min-height:100vh;
-}					
-
+}
+#main_container{
+	width:100%;
+	margin-left:10%;
+	display:flex;
+}
 #main_content{
 	background-color:#111111;
-	width:80%;
-	margin-left:10%;
+	width:65%;
 	min-height:100vh;
 }
 
-.anchor:not(:first-child){
+#side_content{
+	background-color:#111111;
+	width:15%;
+	padding:0.5%;
+	min-height:100vh;
+	text-align:center;
+}
+
+.anchor:not(:first-child), .side_social:not(:first-child){
 	padding-top:80px;
 }
 
@@ -158,8 +170,8 @@ nav ul > li{
 
 .div_news_small{
 	display:inline-block;
-	width:40%;
-	padding: 0px 5% 0% 5%;
+	width:42%;
+	padding: 20px;
 	background-color:#111111;
 	vertical-align : top;
 }
@@ -182,6 +194,11 @@ nav ul > li{
 
 									/* BAND PAGE */
 
+#div_band{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
 #div_discography{
 	text-align:center;
 	clear:both;
@@ -371,5 +388,13 @@ nav ul > li{
 	}
 	.div_liveshow_sub{
 		font-size:12px;
+	}
+	#side_content{
+		display:none
+	}
+	#main_content{
+		background-color:#111111;
+		width:80%;
+		min-height:100vh;
 	}
 }
