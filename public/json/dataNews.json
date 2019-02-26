@@ -1,5 +1,13 @@
 {
     "dataNews": [
+
+        {
+            "newsTitleEn": "2019 Hungarian Tour",
+            "newsTitleHu": "Magyar turné 2019",
+            "newsTextEn": "<p>Tomorrow we will set sails to start touring Hungary, supporting <a href='https://www.facebook.com/talesofevening/ target='_blank'>Tales of Evening</a> and <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>! Check out the tour dates at the <a href='#link_live'>Live section</a>! </p>",
+            "newsTextHu": "<p><p>Holnap megkezdődik a magyar turnénk a <a href='https://www.facebook.com/talesofevening/ target='_blank'>Tales of Evening</a> és a <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a> társaságában! Ne maradj ki, keresd a dátumokat és a helyszíneket a <a href='#link_live'>Koncertek</a> szekcióban! </p>",
+            "newsDate": "2018-02-14 14:33"
+        },
         {
             "newsTitleEn": "Happy New Year!",
             "newsTitleHu": "Boldog Új Évet!",

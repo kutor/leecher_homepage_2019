@@ -105,8 +105,6 @@ const MenuElement = props => (
   <li id={`menu_${props.name}`} className="menu_link"><a href={`#${props.link}`}>{props.name}</a> </li> 
 )
 
-
-
 const BandImage = () => (
   <div id="div_band_image">
     <img src="../img/index/band_img_0.png" alt="the band" className="band_image"></img>
@@ -129,21 +127,60 @@ const MainBody = () => (
       </div>
 )
 
-const SideContent = () =>(
+class SideContent extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      dataLive: [],
+    }
+  }
+
+  componentDidMount() {
+    fetch("/json/dataLive.json")
+      .then(response => response.json())
+      .then(resp => this.setState(
+        {dataLive: resp.dataLive}
+      ));
+  }
+
+  render(){
+    return(
       <div id="side_content">
         <div class="side_social">
           <h5>Live</h5>
-          
+          {this.state.dataLive.map((liveshow, i) => {
+            return ( 
+              <DivLiveSmall 
+                showDate = {this.state.dataLive[i].showDate}
+                showCountry = {this.state.dataLive[i].showCountry}
+                showCountryAbbr = {this.state.dataLive[i].showCountryAbbr}
+                showCity = {this.state.dataLive[i].showCity}                  
+                showVenue = {this.state.dataLive[i].showVenue}
+                showVenueWeb = {this.state.dataLive[i].showVenueWeb}
+                showComment = {this.state.dataLive[i].showComment}
+                showTickets = {this.state.dataLive[i].showTickets}                    
+                /> 
+            );
+          })}
         </div>
+
         <div class="side_social">
           <h5>Facebook</h5>
           <iframe title="iframe_facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fleechermusic%2F&tabs=timeline&width=90%25&height=300px&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="90%" height="300px" style={{border:"none",overflow:"hidden"}} scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
         </div>
+
         <div class="side_social">
           <h5>Instagram</h5>
         </div>
       </div>
-);
+    );
+  }
+}
+
+const DivLiveSmall = props => (
+  <div class="div_live_small"><a className="live_small_link" href={props.showVenueWeb}><span className="live_small_sub">{props.showDate}</span><span className="live_small_sub">{`${props.showCity}, ${props.showCountryAbbr}`}</span></a></div>
+)
 
 
 
@@ -442,7 +479,7 @@ const DivLive = props => (
           <div>{props.showTickets}</div>
         </div>
       </div>
-    )
+)
 
 
 // ---------- MEDIA

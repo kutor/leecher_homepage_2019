@@ -3,6 +3,7 @@
 		{
 			"showDate": "2019-02-15",
 			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
 			"showCity": "Székesfehérvár",
 			"showVenue": "Ikon Club",
 			"showVenueWeb": "https://www.facebook.com/events/348460242631410/",
@@ -12,6 +13,7 @@
 		{
 			"showDate": "2019-02-16",
 			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
 			"showCity": "Esztergom",
 			"showVenue": "Sportalsó",
 			"showVenueWeb": "https://www.facebook.com/events/198934684393162/",
@@ -21,6 +23,7 @@
 		{
 			"showDate": "2019-02-22",
 			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
 			"showCity": "Békéscsaba",
 			"showVenue": "Narancs Rock Cafe",
 			"showVenueWeb": "https://www.facebook.com/events/301847250443232/",
@@ -30,6 +33,7 @@
 		{
 			"showDate": "2019-02-23",
 			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
 			"showCity": "Debrecen",
 			"showVenue": "Kaptár Klub",
 			"showVenueWeb": "https://www.facebook.com/events/2192677274384610/",
@@ -39,6 +43,7 @@
 		{
 			"showDate": "2019-03-08",
 			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
 			"showCity": "Győr",
 			"showVenue": "Dongó",
 			"showVenueWeb": "https://www.facebook.com/events/389765551597127/",
@@ -48,6 +53,7 @@
 		{
 			"showDate": "2019-03-09",
 			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
 			"showCity": "Szombathely",
 			"showVenue": "Végállomás",
 			"showVenueWeb": "https://www.facebook.com/events/506395159864746/",
@@ -57,6 +63,7 @@
 		{
 			"showDate": "2019-04-12",
 			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
 			"showCity": "Pécs",
 			"showVenue": "Ti-Ti-Tá",
 			"showVenueWeb": "https://www.facebook.com/events/337964830363973/",
@@ -66,6 +73,7 @@
 		{
 			"showDate": "2019-04-13",
 			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
 			"showCity": "Szekszárd",
 			"showVenue": "Szekszárdi Est",
 			"showVenueWeb": "https://www.facebook.com/events/271430773519772/",
@@ -75,6 +83,7 @@
 		{
 			"showDate": "2019-05-03",
 			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
 			"showCity": "Zalaegerszeg",
 			"showVenue": "Atlantis",
 			"showVenueWeb": "https://www.facebook.com/events/975333512854848/",
@@ -84,6 +93,7 @@
 		{
 			"showDate": "2019-05-04",
 			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
 			"showCity": "Sopron",
 			"showVenue": "Hangár Music Garden",
 			"showVenueWeb": "https://www.facebook.com/events/2246801822270506/",
