@@ -155,6 +155,7 @@ nav ul > li{
 	padding:0.5%;
 	min-height:100vh;
 	text-align:center;
+	font-size: 0.8em
 }
 
 .anchor:not(:first-child), .side_social:not(:first-child){

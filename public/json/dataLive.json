@@ -61,6 +61,16 @@
 			"showTickets": ""
 		},
 		{
+			"showDate": "2019-04-06",
+			"showCountry": "Hungary",
+			"showCountryAbbr": "HU",
+			"showCity": "Zalaegerszeg",
+			"showVenue": "Atlantis",
+			"showVenueWeb": "https://www.facebook.com/events/975333512854848/",
+			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
 			"showDate": "2019-04-12",
 			"showCountry": "Hungary",
 			"showCountryAbbr": "HU",
@@ -75,18 +85,8 @@
 			"showCountry": "Hungary",
 			"showCountryAbbr": "HU",
 			"showCity": "Szekszárd",
-			"showVenue": "Szekszárdi Est",
+			"showVenue": "Est",
 			"showVenueWeb": "https://www.facebook.com/events/271430773519772/",
-			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
-			"showTickets": ""
-		},
-		{
-			"showDate": "2019-05-03",
-			"showCountry": "Hungary",
-			"showCountryAbbr": "HU",
-			"showCity": "Zalaegerszeg",
-			"showVenue": "Atlantis",
-			"showVenueWeb": "https://www.facebook.com/events/975333512854848/",
 			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
 			"showTickets": ""
 		},
@@ -98,6 +98,16 @@
 			"showVenue": "Hangár Music Garden",
 			"showVenueWeb": "https://www.facebook.com/events/2246801822270506/",
 			"showComment": "With <a href='https://www.facebook.com/talesofevening/' target='_blank'>Tales of Evening</a> & <a href='https://www.facebook.com/NovaProspectHungary' target='_blank'>Nova Prospect</a>",
+			"showTickets": ""
+		},
+		{
+			"showDate": "2019-05-19",
+			"showCountry": "France",
+			"showCountryAbbr": "FR",
+			"showCity": "Paris",
+			"showVenue": "Le Klub",
+			"showVenueWeb": "https://www.facebook.com/events/402804103592128/",
+			"showComment": "Ladies Rock & Metal Fest",
 			"showTickets": ""
 		}
 	]

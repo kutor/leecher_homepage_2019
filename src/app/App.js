@@ -167,7 +167,13 @@ class SideContent extends Component {
 
         <div class="side_social">
           <h5>Facebook</h5>
-          <iframe title="iframe_facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fleechermusic%2F&tabs=timeline&width=90%25&height=300px&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="90%" height="300px" style={{border:"none",overflow:"hidden"}} scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+          <div class="fb-page" 
+            data-tabs="timeline"
+            data-show-facepile="false"
+            data-small-header="true"
+            data-height="650px"
+            data-href="https://www.facebook.com/leechermusic"
+            data-width="380"></div>
         </div>
 
         <div class="side_social">
