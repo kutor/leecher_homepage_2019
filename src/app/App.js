@@ -133,6 +133,7 @@ class SideContent extends Component {
     super()
     this.state = {
       dataLive: [],
+      today: new Date (`${new Date().getFullYear()}-${new Date().getMonth()+1 < 10? `0${new Date().getMonth()+1}` : new Date().getMonth()+1}-${new Date().getDate()}`)
     }
   }
 
@@ -145,12 +146,12 @@ class SideContent extends Component {
   }
 
   render(){
-    return(
+    return (
       <div id="side_content">
         <div class="side_social">
-          <h5>Live</h5>
+          <h5>Upcoming Shows</h5>
           {this.state.dataLive.map((liveshow, i) => {
-            return ( 
+            return new Date (this.state.dataLive[i].showDate) > this.state.today ? ( 
               <DivLiveSmall 
                 showDate = {this.state.dataLive[i].showDate}
                 showCountry = {this.state.dataLive[i].showCountry}
@@ -161,23 +162,25 @@ class SideContent extends Component {
                 showComment = {this.state.dataLive[i].showComment}
                 showTickets = {this.state.dataLive[i].showTickets}                    
                 /> 
-            );
+            ) : null;
           })}
         </div>
 
         <div class="side_social">
-          <h5>Facebook</h5>
+          {/*<h5>Facebook</h5>*/}
           <div class="fb-page" 
             data-tabs="timeline"
             data-show-facepile="false"
             data-small-header="true"
-            data-height="650px"
+            data-height="750px"
             data-href="https://www.facebook.com/leechermusic"
             data-width="380"></div>
         </div>
 
         <div class="side_social">
-          <h5>Instagram</h5>
+          {/*<h5>Instagram</h5>*/}
+          <iframe title="instagram_feed" src="//lightwidget.com/widgets/ff6a1cf069055ddbba5493a76ccbff9f.html" scrolling="no" allowtransparency="true" className="lightwidget-widget" style={{width:"100%", border:0, overflow:"hidden"}}></iframe>
+
         </div>
       </div>
     );
@@ -191,7 +194,7 @@ const DivLiveSmall = props => (
 
 
 const Bottom = () => (
-  <div id="div_footer">-  © 2016-2019 Leecher  -  coded by kutor  -  contact: <a href="mailto:management@leechermusic.com" target="_blank" rel="noopener noreferrer">management@leechermusic.com</a>  -  <a href="legal.html">legal & privacy policy</a>  -</div>
+  <div id="div_footer">-  © 2016-2019 Leecher  -  coded by kutor  -  contact: <a href="mailto:management@leechermusic.com" target="_blank" rel="noopener noreferrer">management@leechermusic.com</a> -</div>
 )
 
 // ---------- ---------- ---------- SUBPAGES ---------- ---------- ---------- 
@@ -433,6 +436,7 @@ class ContentLive extends Component {
     super()
     this.state = {
       dataLive: [],
+      today: new Date (`${new Date().getFullYear()}-${new Date().getMonth()+1 < 10? `0${new Date().getMonth()+1}` : new Date().getMonth()+1}-${new Date().getDate()}`)
     }
   }
 
@@ -451,7 +455,7 @@ class ContentLive extends Component {
         <div id="div_live" className="content_container">
         
           {this.state.dataLive.map((liveshow, i) => {
-            return ( 
+            return new Date (this.state.dataLive[i].showDate) > this.state.today ? ( 
               <DivLive 
                 showDate = {this.state.dataLive[i].showDate}
                 showCountry = {this.state.dataLive[i].showCountry}
@@ -461,7 +465,7 @@ class ContentLive extends Component {
                 showComment = {this.state.dataLive[i].showComment}
                 showTickets = {this.state.dataLive[i].showTickets}                    
                 /> 
-            );
+            ) : null;
           })}
           
         </div>
