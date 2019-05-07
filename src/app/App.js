@@ -151,7 +151,7 @@ class SideContent extends Component {
         <div class="side_social">
           <h5>Upcoming Shows</h5>
           {this.state.dataLive.map((liveshow, i) => {
-            return new Date (this.state.dataLive[i].showDate) > this.state.today ? ( 
+            return new Date (this.state.dataLive[i].showDate) >= this.state.today ? ( 
               <DivLiveSmall 
                 showDate = {this.state.dataLive[i].showDate}
                 showCountry = {this.state.dataLive[i].showCountry}
@@ -455,7 +455,7 @@ class ContentLive extends Component {
         <div id="div_live" className="content_container">
         
           {this.state.dataLive.map((liveshow, i) => {
-            return new Date (this.state.dataLive[i].showDate) > this.state.today ? ( 
+            return new Date (this.state.dataLive[i].showDate) >= this.state.today ? ( 
               <DivLive 
                 showDate = {this.state.dataLive[i].showDate}
                 showCountry = {this.state.dataLive[i].showCountry}

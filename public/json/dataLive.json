@@ -101,6 +101,16 @@
 			"showTickets": ""
 		},
 		{
+			"showDate": "2019-05-17",
+			"showCountry": "France",
+			"showCountryAbbr": "FR",
+			"showCity": "Réding",
+			"showVenue": "Le Lapin Blanc",
+			"showVenueWeb": "https://www.facebook.com/events/245844919629094/",
+			"showComment": "",
+			"showTickets": ""
+		},
+		{
 			"showDate": "2019-05-19",
 			"showCountry": "France",
 			"showCountryAbbr": "FR",
