@@ -1,0 +1,412 @@
+/* LEECHER CSS */
+
+html, body{
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	color:#eee;
+	width:100%;
+	height:100%;
+	margin:0;
+	overflow-x: hidden;
+}
+body{ 
+	background-image:url(../img/index/bg.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	background-size:cover;
+}
+a, a:focus, a:hover, a:visited{
+	text-decoration:none;
+	outline:0;
+	color:#A56D41;
+}
+a:hover{
+	color:white;
+}
+li{
+	list-style:none;
+}
+ul{
+	padding:0px;
+	margin:0px;
+}
+article{
+	margin-left:5%;
+	margin-right:5%;
+	padding-bottom:15px;
+	margin-top:0px;
+	padding-top:20px;
+}
+p{
+	margin:0px;
+	font-size:14px;
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+h2{
+	font-size:30px;
+	font-variant:small-caps;
+	padding: 1% 2% 1%;
+	margin:0%
+}
+h3{
+	font-size:20px;
+	font-variant:small-caps;
+	margin-top:10px;
+}
+h4{
+	font-size:25px;
+	font-variant:small-caps;
+	margin:0px;
+	padding:1%;
+}
+h5{
+	font-size:20px;
+	font-variant:small-caps;
+	margin-top:10px;
+}
+h6{
+	font-size:12px;
+}
+
+.centered{
+	text-align:center;
+}
+								 /* TOP PART*/
+
+#sticky{
+	position:sticky;
+	top:0;
+	z-index:999;
+}					
+#headerUpperLine{
+	position:relative;
+	height:30px;
+	background-color:black;
+	text-align:center;
+}
+.social_img{
+	height:30px;
+	padding-left:5px;
+	padding-right:5px;
+}
+.social_img:hover{
+	opacity:0.5;
+}
+nav{
+	height:50px;
+	background-color:white;
+	color:black;
+	display:flex;
+	justify-content: space-around;
+	align-items:center;
+}
+
+.menu_link a{
+	color:black
+}
+.menu_link a:hover{
+	color:#A56D41;
+}
+nav ul{
+	display:flex;
+	align-items:center;
+	position:absolute;
+	width:80%;
+}
+nav ul > li{
+	font-size:18px;
+	width:16.1%;
+	text-align:center;
+}
+#line{
+	height:5px;
+	background-color:black;
+}
+									/* IMAGES */
+
+#div_band_image{
+	text-align:center;
+	margin-bottom:-5px;
+}
+#div_band_image img {
+	max-width:100%;
+}
+
+									/* CONTENT */
+.content_container{
+	min-height:100vh;
+}
+#main_container{
+	width:100%;
+	margin-left:10%;
+	display:flex;
+}
+#main_content{
+	background-color:#111111;
+	width:65%;
+	min-height:100vh;
+}
+
+#side_content{
+	background-color:#111111;
+	width:15%;
+	padding:0.5%;
+	min-height:100vh;
+	text-align:center;
+	font-size: 0.8em
+}
+
+.anchor:not(:first-child), .side_social:not(:first-child){
+	padding-top:80px;
+}
+									/* SIDEBAR */
+
+.div_live_small{
+	font-size:1em;
+	padding:1.5% 2%;
+}
+.live_small_link{
+	display:flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+}
+
+									/* NEWS */
+#div_news{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+
+.div_news_small{
+	display:inline-block;
+	width:42%;
+	padding: 20px;
+	background-color:#111111;
+	vertical-align : top;
+}
+
+.div_news_small img{
+	max-width:85%;
+	display:block;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+                                    /* FOOTER */
+#div_footer{
+	text-align: center;
+	font-size:10px;
+	background-color:black;
+}
+
+									/* BAND PAGE */
+
+#div_band{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+#div_discography{
+	text-align:center;
+	clear:both;
+}
+.img_album{
+	max-width:30%;
+	height:auto;
+}
+.lyrics{
+	margin-top:15px;
+	margin-bottom:25px;
+}
+.songtitle{
+	font-size:18px;
+	font-variant:small-caps;
+	font-weight:bold;
+	padding-left:10%;
+	padding-right:10%;
+	cursor:pointer;
+}
+.lyrics, .lyrics p{
+	text-align:center;
+	font-variant:normal;
+	font-weight:normal;
+}
+
+#members{
+	display:flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.band_member_profile{
+	width:30%;
+	text-align:center;
+	vertical-align:top;
+	padding:0% 1% 50px 1%;;
+}
+.band_member_profile p{
+	padding-left:5%;
+	padding-right:5%;
+}
+.band_member_profile img{
+	max-width:90%;
+	height:auto;
+}
+									/* LIVE */
+
+#div_live{
+	display:flex;
+	flex-direction:column;
+}
+.div_liveshow:nth-child(odd), .div_live_small:nth-child(even){
+	background:#333333;
+}
+.div_liveshow{
+	display:flex;
+	justify-content:space-between;
+	padding:1%;
+}
+.div_liveshow_sub:nth-child(1){
+	width:50%;
+}
+.div_liveshow_sub:nth-child(2){
+	width:35%
+}
+.div_liveshow_sub:nth-child(3){
+	width:15%
+}
+.div_liveshow_sub div{
+	display:flex;
+	justify-content: flex-start;
+	display:inline-block;
+	padding: 0px 20px;
+}
+
+									/* MEDIA */
+
+#media_videos, #div_media_videos{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+.div_media_item{					/* VIDEOS */
+	width:30%;
+	height:auto;
+	margin:1%;
+	text-align:center;
+	background-color:#222222; 
+	display:inline-block;
+	vertical-align:top;
+}
+.div_media_item p{
+	padding: 0% 5% 3% 5%;
+	text-align:center;
+}
+.iframe_youtube{
+	max-width:99%;
+	/*height:56.25%;*/
+	height:auto;
+	padding:1% auto;
+}									/* PHOTOS */
+#media_photos, #div_media_photos{
+	display:flex;
+	justify-content:space-around;
+	flex-wrap:wrap;
+}
+.div_media_item img{
+	width:98%;
+	height:auto;
+	margin:2% auto;
+}	
+									/* SHOP */
+
+#div_shop, #div_contact{
+	display:flex;
+	justify-content:space-around;
+	flex-wrap:wrap;
+}
+
+#div_shop article a{
+	color:white;
+}
+#div_shop article a:hover{
+	color:#A56D41;
+}
+									/* CONTACT */
+.article_contact{
+	width:31%;
+	height:auto;
+	text-align:center;
+	background-color:#222222;
+	margin:1%;
+	display:inline-block;
+	vertical-align:top;
+}
+.article_contact p {
+	text-align:center;
+	line-height:200%;
+}
+.article_contact img{
+	max-width:90%;
+}
+.article_contact img:hover{
+	opacity:0.8;
+}
+
+									/* PROMO */
+.div_mediaBig{
+	width:70%;
+	text-align:center;
+	margin:0 auto;
+	display:table;
+	background-color:black;
+}
+.youtubeBig {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:1px;
+	height:0;
+	overflow:hidden;
+	background-color:black;
+}
+.youtubeBig iframe, .youtubeBig object, .youtubeBig embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:black;
+	border-style:none;
+}	
+
+									/* MOBILE */
+
+@media only screen and (max-width: 1280px){
+	.resp{
+		width:90%;
+	}
+	.div_liveshow_sub div{
+		display:flex;
+	}
+	.menu_link{
+		font-size:.8em;
+	}
+	.songtitle{
+		font-size:14px;
+	}
+	.div_liveshow_sub{
+		font-size:12px;
+	}
+	#side_content{
+		display:none
+	}
+	#main_content{
+		background-color:#111111;
+		width:80%;
+		min-height:100vh;
+	}
+}
