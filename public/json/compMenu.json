@@ -1,0 +1,60 @@
+{
+    "compMenu": [
+        {
+            "name": "NEWS",
+            "fill": {
+                "topicline": "News / Hírek",
+                "content": "<ContentNews />",
+                "link": "link_news"
+            }
+        },
+        {
+            "name": "BAND",
+            "fill": {
+                "topicline": "Band / A Zenekar",
+                "content": "<ContentBand />",
+                "link": "link_band"
+            }
+        },
+        {
+            "name": "SONGS",
+            "fill": {
+                "topicline": "Albums & Lyrics / Lemezek és Szövegek",
+                "content": "<ContentAlbums />",
+                "link": "link_albums"
+            }
+        },
+        {
+            "name": "LIVE",
+            "fill": {
+                "topicline": "Live Shows / Élő Koncertek",
+                "content": "<ContentLive />",
+                "link": "link_live"
+            }
+        },
+        {
+            "name": "MEDIA",
+            "fill": {
+                "topicline": "Media",
+                "content": "<ContentMedia />",
+                "link": "link_media"
+            }
+        },
+        {
+            "name": "SHOP",
+            "fill": {
+                "topicline": "Shop / Bolt",
+                "content": "<ContentShop />",
+                "link": "link_shop"
+            }
+        },
+        {
+            "name": "CONTACT",
+            "fill": {
+                "topicline": "Contact / Kapcsolat",
+                "content": "<ContentContact />",
+                "link": "link_contact"
+            }
+        }
+    ]
+}
